@@ -171,7 +171,10 @@ func isZero(v reflect.Value) bool {
 		}
 		return z
 	case reflect.Ptr:
-		return v.IsNil() || isZero(reflect.Indirect(v))
+		// Modified: we don't need to indirect the pointer.
+		// If the pointer is set, but points at a zero value, that's fine -
+		// we only care that it was set at all. This allows explicit empty values (e.g. "")
+		return v.IsNil()
 	}
 	// Compare other types directly:
 	z := reflect.Zero(v.Type())
