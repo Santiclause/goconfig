@@ -44,3 +44,17 @@ Priority
 
 The provided yaml file will be loaded first (if it exists), and environment
 variables will override the yaml files.
+
+
+Debug level
+-----------
+
+The Config struct type also defines a debug level and reads it from yaml: `debug`
+and env: `DEBUG` respectively, and you can check if the debug level is at least
+at a certain level via `config.DebugLevel(level)` - e.g.:
+
+```go
+if config.DebugLevel("info") {
+    log.Println("New connection from client")
+}
+```
