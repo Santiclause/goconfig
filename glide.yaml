@@ -1,0 +1,5 @@
+package: github.com/santiclause/goconfig
+import:
+- package: github.com/santiclause/env
+- package: gopkg.in/yaml.v2
+  version: ~2.2.1

@@ -1,0 +1,8 @@
+hash: a2817fb7da7489986f80cfba5a4fcbe66f9b1119d93515575336b7ea724cacca
+updated: 2018-06-29T20:11:59.858605041-04:00
+imports:
+- name: github.com/santiclause/env
+  version: 220d32dc1e8e0d5f6885d68356ecca69b4173037
+- name: gopkg.in/yaml.v2
+  version: 5420a8b6744d3b0345ab293f6fcba19c978f1183
+testImports: []

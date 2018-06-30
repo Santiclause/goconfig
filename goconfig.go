@@ -11,7 +11,7 @@ import (
 	"sync"
 	"syscall"
 
-	"github.com/caarlos0/env"
+	"github.com/santiclause/env"
 	"gopkg.in/yaml.v2"
 )
 
