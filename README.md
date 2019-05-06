@@ -7,7 +7,9 @@ type or manually implement the interface (I recommend the former), and then
 you're essentially good to go. Observe:
 
 ```go
+package main
 import (
+    "time"
     "github.com/santiclause/goconfig"
 )
 type Config struct {
@@ -23,9 +25,9 @@ func main() {
         HttpPort: 8080,
     }
     config.SetFilename("whatever.yaml")
-    goconfig.Load(&config)
+    goconfig.Load(config)
     // Optionally make it listen for SIGHUPs
-    goconfig.ListenForSignals(&config)
+    goconfig.ListenForSignals(config)
 }
 ```
 
