@@ -38,7 +38,7 @@ type Config struct {
 	filename  string
 	listening bool
 	// Mutex guards readwrite access to Config.
-	sync.Mutex
+	sync.RWMutex
 }
 
 func (c *Config) GetFilename() string {
